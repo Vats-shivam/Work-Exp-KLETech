@@ -9,14 +9,14 @@ import Records from './components/Records'
 function App() {
   const [count, setCount] = useState(0)
   const [category,setCategory]=useState(null);
-
+  let faculty_id=1;
   console.log(category);
   // console.log(DB.data[0])
   return (
     <>
     <h1 className="text-center text-5xl pt-8 h-1/5 bg-amber-200">Work Experience</h1>
     <Dashboard setCategory={setCategory}/>
-    {category?(<Records category={category}/>):<></>}
+    {category?(<Records faculty_id={1} category={category}/>):<></>}
     </>
   )
 }
