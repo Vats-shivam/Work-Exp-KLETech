@@ -184,7 +184,7 @@ export default function Records(props) {
           <input className="border border-black px-5 mx-2" value={filters.designation} onChange={(event) => { setFilters({ ...filters, designation: event.target.value }) }} id="designation" type="text" />
           <label htmlFor="experience">Minimum Years of Experience</label>
           <input className="border border-black px-5 mx-2" value={filters.yoe} onChange={(event) => { setFilters({ ...filters, yoe: event.target.value }) }} id="experience" type="number" />
-          <button type="submit" className="border border-black rounded-md w-[12rem] bg-green-400 my-8">Filter</button>
+          <button type="submit" className="p-2 my-8 bg-linear-br from-[#fcfcfd] to-[#fffaec] border-[2px] border-[rgb(241,84,116)] rounded-xl font-bold">Filter</button>
         </form>
         {!props.admin&&<form className="py-5 flex flex-col w-1/4" action="__blank" onSubmit={handleInputRecord}>
           <h3 className="text-2xl mb-4">Add Record</h3>
@@ -208,7 +208,7 @@ export default function Records(props) {
           <input className="border border-black px-5 mx-2" value={inputRecord.NameofIndustry} onChange={(event) => { setInputRecord({ ...inputRecord, NameofIndustry: event.target.value }) }} id="industryInput" type="text" />
           <label htmlFor="designationInput">Designation</label>
           <input className="border border-black px-5 mx-2" value={inputRecord.Designation} onChange={(event) => { setInputRecord({ ...inputRecord, Designation: event.target.value }) }} id="designationInput" type="text" />
-          <button type="submit" className="border border-black rounded-md w-[12rem] bg-green-400 my-8">Submit</button>
+          <button type="submit" className="p-2 my-8 bg-linear-br from-[#fcfcfd] to-[#fffaec] border-[2px] border-[rgb(241,84,116)] rounded-xl font-bold">Submit</button>
         </form>}
         {showEditForm && (
           <div className="overlay-form bg-black text-white w-[100%] flex flex-col items-center absolute z-10 ">
@@ -256,13 +256,13 @@ export default function Records(props) {
               {!props.admin&&<td className='py-2 px-4 border-b text-center'>
                 <button
                   onClick={() => handleEdit(index)}
-                  className="bg-blue-500 text-white px-2 py-1 mr-2"
+                  className="px-2 py-1 mr-2 my-8 bg-linear-br from-[#fcfcfd] to-[#fffaec] border-[2px] border-[rgb(241,84,116)] rounded-xl font-bold"
                 >
                   Edit
                 </button>
                 <button
                   onClick={() => deleteData(index)}
-                  className="bg-red-500 text-white px-2 py-1"
+                  className="px-2 py-1 bg-linear-br from-[#fcfcfd] to-[#fffaec] border-[2px] border-[rgb(241,84,116)] rounded-xl font-bold"
                 >
                   Delete
                 </button>

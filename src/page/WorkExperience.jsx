@@ -5,7 +5,7 @@ import Records from '../components/Records'
 
 function WorkExperience() {
   const [category,setCategory]=useState("Teaching");
-  let faculty_role="faculty";
+  let faculty_role=localStorage.getItem("email");
   let faculty_id="1";
   console.log(category);
   // console.log(DB.data[0])
